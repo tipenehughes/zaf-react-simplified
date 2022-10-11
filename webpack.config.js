@@ -20,7 +20,6 @@ const zendeskGardenJsDelivrUrl = (function () {
 
 const externalAssets = {
 	css: [zendeskGardenJsDelivrUrl],
-	js: ["https://assets.zendesk.com/apps/sdk/2.0/zaf_sdk.js"],
 };
 
 module.exports = {
@@ -73,10 +72,8 @@ module.exports = {
 		}),
 
 		new HtmlWebpackPlugin({
-			warning:
-				"AUTOMATICALLY GENERATED FROM ./src/templates/iframe.html - DO NOT MODIFY THIS FILE DIRECTLY",
+			warning: "AUTOMATICALLY GENERATED FROM ./src/iframe.html - DO NOT MODIFY THIS FILE DIRECTLY",
 			vendorCss: externalAssets.css.filter((path) => !!path),
-			vendorJs: externalAssets.js,
 			template: "./src/iframe.html",
 			filename: "iframe.html",
 		}),
