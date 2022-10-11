@@ -25,10 +25,7 @@ const externalAssets = {
 
 module.exports = {
 	entry: {
-		app: [
-			"./src/App.js",
-			"./src/index.css",
-		],
+		app: ["./src/App.js", "./src/index.css"],
 	},
 	output: {
 		filename: "[name].js",
@@ -80,7 +77,7 @@ module.exports = {
 				"AUTOMATICALLY GENERATED FROM ./src/templates/iframe.html - DO NOT MODIFY THIS FILE DIRECTLY",
 			vendorCss: externalAssets.css.filter((path) => !!path),
 			vendorJs: externalAssets.js,
-			template: "./src/templates/iframe.html",
+			template: "./src/iframe.html",
 			filename: "iframe.html",
 		}),
 	],
